@@ -1,9 +1,9 @@
 {
-  "name": "Stevie",
+  "name": "Emmet",
   "version": "0.0.0",
   "private": true,
   "author": "Aaron",
-  "description": "Your friendly neighbourhood robot",
+  "description": "Everything is awesome",
   "dependencies": {
     "hubot": "^2.17.0",
     "hubot-diagnostics": "0.0.1",
