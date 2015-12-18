@@ -39,7 +39,7 @@ Then you can interact with Emmet by typing `Emmet help`.
 A few scripts (including some installed by default) require environment
 variables to be set as a simple form of configuration.
 
-Each script should have a commented header which contains a "Configuration"
+Each script should have a commented header which contai ns a "Configuration"
 section that explains which values it requires to be placed in which variable.
 When you have lots of scripts installed this process can be quite labour
 intensive. The following shell command can be used as a stop gap until an
