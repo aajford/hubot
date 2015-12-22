@@ -48,7 +48,25 @@ module.exports = (robot) ->
     "I heard he killed a guy",
     "Nope, don't know him",
     "WHAT A BEARD",
-    "Get that man a tequila"
+    "Get that man a tequila",
+    "Will anyone keep him company in his spare bedroom?",
+    "Stratford was better",
+    "Fiesty one he is",
+    "Bad boy 4 lyf",
+    "Think he's missed a semicolon again"
+  ]
+  
+  lateComments = [
+    "TEN POINTS FROM GRYFFINDOR",
+    "Late? A wizard is never late",
+    "Tut tut",
+    "*tutting noise*",
+    "Ummmmm... I'm telling",
+    "TEN POINTS FROM SLYTHERIN",
+    "TEN POINTS FROM RAVENCLAW",
+    "TEN POINTS FROM HUFFLEPUFF",
+    "*Better three hours too soon than a minute too late* - William Shakespeare",
+    "*A man who dreads trials and difficulties cannot become a revolutionary. If he is to become a revolutionary with an indomitable fighting spirit, he must be tempered in the arduous struggle from his youth. As the saying goes, early training means more than late earning.* - Kim Jong Il"
   ]
 
   robot.hear /.*(kavi).*/i, (msg) ->
@@ -57,6 +75,9 @@ module.exports = (robot) ->
 
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
+    
+  robot.hear /.*(late ).*/i, (msg) ->
+    msg.send msg.random lateComments
 
 
 
