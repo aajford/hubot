@@ -78,6 +78,9 @@ module.exports = (robot) ->
     
   robot.hear /.*(late ).*/i, (msg) ->
     msg.send msg.random lateComments
+    
+  robot.hear /.*( late).*/i, (msg) ->
+    msg.send msg.random lateComments
 
 
 
