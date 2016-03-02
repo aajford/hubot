@@ -56,6 +56,11 @@ module.exports = (robot) ->
     "Think he's missed a semicolon again"
   ]
   
+  nzBanter = [
+    "I hear New Zealand won more medals per capita",
+    "I'm not quite sure where New Zealand is, but you can dance your way there from Old Zealand"
+  ]
+  
   lateComments = [
     "TEN POINTS FROM GRYFFINDOR",
     "Late? A wizard is never late",
@@ -71,7 +76,9 @@ module.exports = (robot) ->
 
   robot.hear /.*(kavi).*/i, (msg) ->
     msg.send msg.random banter 
-
+  
+  robot.hear /.*(jonker).*/i, (msg) ->
+    msg.send msg.random nzBanter
 
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
