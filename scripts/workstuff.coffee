@@ -58,7 +58,16 @@ module.exports = (robot) ->
   
   nzBanter = [
     "I hear New Zealand won more medals per capita",
-    "I'm not quite sure where New Zealand is, but you can dance your way there from Old Zealand"
+    "I'm not quite sure where New Zealand is, but you can dance your way there from Old Zealand",
+    "Didn't he lose that boxing match?",
+    "Don't get him started on the cafe menu",
+    "He's probably at Wetherspoons"
+  ]
+  
+  jamieBanter = [
+    "Beefcake? Yeah, beefcake.",
+    "Don't mention Jira to him",
+    "I hear the steroids make him angry"
   ]
   
   lateComments = [
@@ -79,6 +88,9 @@ module.exports = (robot) ->
   
   robot.hear /.*(jonker).*/i, (msg) ->
     msg.send msg.random nzBanter
+  
+  robot.hear /.*(jamie).*/i, (msg) ->
+    msg.send msg.random jamieBanter
 
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
