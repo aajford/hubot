@@ -61,7 +61,8 @@ module.exports = (robot) ->
     "I'm not quite sure where New Zealand is, but you can dance your way there from Old Zealand",
     "Didn't he lose that boxing match?",
     "Don't get him started on the cafe menu",
-    "He's probably at Wetherspoons"
+    "He's probably at Wetherspoons",
+    "There's a sheep at reception asking for a Mr. Jonker?"
   ]
   
   jamieBanter = [
