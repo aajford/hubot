@@ -71,6 +71,11 @@ module.exports = (robot) ->
     "I hear the steroids make him angry"
   ]
   
+  scouseBanter = [
+    "He's only here so he can punch Dan in the face again",
+    "Everton's finest"
+  ]
+  
   lateComments = [
     "TEN POINTS FROM GRYFFINDOR",
     "Late? A wizard is never late",
@@ -92,13 +97,16 @@ module.exports = (robot) ->
   
   robot.hear /.*(jamie).*/i, (msg) ->
     msg.send msg.random jamieBanter
+  
+  robot.hear /.*(khaleel).*/i, (msg) ->
+    msg.send msg.random scouseBanter
 
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
-    
+  
   robot.hear /.*(late ).*/i, (msg) ->
     msg.send msg.random lateComments
-    
+  
   robot.hear /.*( late).*/i, (msg) ->
     msg.send msg.random lateComments
 
