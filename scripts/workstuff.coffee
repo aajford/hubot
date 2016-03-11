@@ -72,8 +72,15 @@ module.exports = (robot) ->
   ]
   
   scouseBanter = [
+    "Gerrard is just a poor man's Carrick"
     "He's only here so he can punch Dan in the face again",
     "Everton's finest"
+    "He wasn't even that good at beer pong"
+  ]
+  
+  jessBanter = [
+    "Cheesy balls please",
+    "Isn't her supervillain name 'The Jessticle'?"
   ]
   
   lateComments = [
@@ -101,6 +108,9 @@ module.exports = (robot) ->
   robot.hear /.*(khaleel).*/i, (msg) ->
     msg.send msg.random scouseBanter
 
+  robot.hear /.*(jess).*/i, (msg) ->
+    msg.send msg.random jessBanter
+  
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
   
