@@ -83,6 +83,10 @@ module.exports = (robot) ->
     "Isn't her supervillain name 'The Jessticle'?"
   ]
   
+  philBanter = [
+    "I don't think Frankie & Benny's is over priced"
+  ]
+  
   lateComments = [
     "TEN POINTS FROM GRYFFINDOR",
     "Late? A wizard is never late",
@@ -110,6 +114,9 @@ module.exports = (robot) ->
 
   robot.hear /.*(jess).*/i, (msg) ->
     msg.send msg.random jessBanter
+  
+  robot.hear /.*(phil).*/i, (msg) ->
+    msg.send msg.random philBanter
   
   robot.hear /.*(Leeds).*/i, (msg) ->
     msg.send "GRAAAAAYVVVEEEH"
