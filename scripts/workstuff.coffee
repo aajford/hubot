@@ -62,7 +62,8 @@ module.exports = (robot) ->
     "Didn't he lose that boxing match?",
     "Don't get him started on the cafe menu",
     "He's probably at Wetherspoons",
-    "There's a sheep at reception asking for a Mr. Jonker?"
+    "There's a sheep at reception asking for a Mr. Jonker?",
+    "This is how people from NZ play cricket: http://gph.is/13hPTEZ"
   ]
   
   jamieBanter = [
