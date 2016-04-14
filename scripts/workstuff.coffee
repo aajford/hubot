@@ -2,10 +2,15 @@
 #   Provides work related stuff 
 #
 # Commands:
-#   hubot wiki - Reply with URL for the wiki 
+#   hubot wiki - Reply with URL for the Scoop Wiki 
 #   hubot android build server - Reply with URL for Android Build Server
-#   hubot iphone config - Reply with URL for iPhone config
+#   hubot ios build server - Reply with URL for iOS Build Server
 #   hubot android config - Reply with URL for Android config
+#   hubot android dev config - Reply with URL for Android Dev config
+#   hubot android stage config - Reply with URL for Android Stage config
+#   hubot ios config - Reply with URL for iOS config
+#   hubot ios dev config - Reply with URL for iOS Dev config
+#   hubot ios stage config - Reply with URL for iOS Stage config
 #   hubot live stream - Reply with URL for live stream
 #   hubot service desk - Reply with contact details for the DC service desk
 
@@ -13,26 +18,63 @@
 module.exports = (robot) ->
   robot.respond /wiki$/i, (msg) ->
     msg.send "http://wiki.scoop.bskyb.com/wiki/Main_Page"
-
-
+  
   robot.respond /android build server$/i, (msg) ->
     msg.send "http://mobile-build.scoop.bskyb.com/"
+  
+  robot.respond /ios build server$/i, (msg) ->
+    msg.send "http://10.241.80.95:8080/"
 
-
-  robot.respond /iphone config$/i, (msg) ->
+  robot.respond /ios config$/i, (msg) ->
     msg.send "http://app.news.sky.com/ios/config.json"
-
+  
+  robot.respond /ios dev config$/i, (msg) ->
+    msg.send "http://stageapp.news.sky.com/ios/dev/config.json"
+  
+  robot.respond /ios stage config$/i, (msg) ->
+    msg.send "http://stageapp.news.sky.com/ios/stage/config.json"
 
   robot.respond /android config$/i, (msg) ->
     msg.send "http://app.news.sky.com/android/config.json"
-
+  
+  robot.respond /android dev config$/i, (msg) ->
+    msg.send "http://stageapp.news.sky.com/android/config-dev.json"
+  
+  robot.respond /android stage config$/i, (msg) ->
+    msg.send "http://stageapp.news.sky.com/android/config-stage.json"
 
   robot.respond /live stream$/i, (msg) ->
     msg.send "http://skydvn-ssmtv-mobile-prod.mobile-tv.sky.com/ssmtv-skynews/1404/sn.m3u8"
 
-
   robot.respond /service desk$/i, (msg) ->
-    msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973" 
+    msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973"
+  
+  #robot.hear /.*(kavi).*/i, (msg) ->
+  #  msg.send msg.random banter 
+  
+  #robot.hear /.*(jonker).*/i, (msg) ->
+  #  msg.send msg.random nzBanter
+  
+  #robot.hear /.*(jamie).*/i, (msg) ->
+  #  msg.send msg.random jamieBanter
+  
+  #robot.hear /.*(khaleel).*/i, (msg) ->
+  #  msg.send msg.random scouseBanter
+
+  #robot.hear /.*(jess).*/i, (msg) ->
+  #  msg.send msg.random jessBanter
+  
+  #robot.hear /.*(phil).*/i, (msg) ->
+  #  msg.send msg.random philBanter
+  
+  #robot.hear /.*(Leeds).*/i, (msg) ->
+  #  msg.send "GRAAAAAYVVVEEEH"
+  
+  #robot.hear /.*(late ).*/i, (msg) ->
+  #  msg.send msg.random lateComments
+  
+  #robot.hear /.*( late).*/i, (msg) ->
+  #  msg.send msg.random lateComments
 
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
@@ -100,34 +142,3 @@ module.exports = (robot) ->
     "*Better three hours too soon than a minute too late* - William Shakespeare",
     "*A man who dreads trials and difficulties cannot become a revolutionary. If he is to become a revolutionary with an indomitable fighting spirit, he must be tempered in the arduous struggle from his youth. As the saying goes, early training means more than late earning.* - Kim Jong Il"
   ]
-
-  robot.hear /.*(kavi).*/i, (msg) ->
-    msg.send msg.random banter 
-  
-  robot.hear /.*(jonker).*/i, (msg) ->
-    msg.send msg.random nzBanter
-  
-  robot.hear /.*(jamie).*/i, (msg) ->
-    msg.send msg.random jamieBanter
-  
-  robot.hear /.*(khaleel).*/i, (msg) ->
-    msg.send msg.random scouseBanter
-
-  robot.hear /.*(jess).*/i, (msg) ->
-    msg.send msg.random jessBanter
-  
-  robot.hear /.*(phil).*/i, (msg) ->
-    msg.send msg.random philBanter
-  
-  robot.hear /.*(Leeds).*/i, (msg) ->
-    msg.send "GRAAAAAYVVVEEEH"
-  
-  robot.hear /.*(late ).*/i, (msg) ->
-    msg.send msg.random lateComments
-  
-  robot.hear /.*( late).*/i, (msg) ->
-    msg.send msg.random lateComments
-
-
-
-
