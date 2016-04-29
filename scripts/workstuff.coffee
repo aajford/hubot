@@ -63,7 +63,8 @@ module.exports = (robot) ->
     "Don't get him started on the cafe menu",
     "He's probably at Wetherspoons",
     "There's a sheep at reception asking for a Mr. Jonker?",
-    "This is how people from NZ play cricket: http://gph.is/13hPTEZ"
+    "This is how people from NZ play cricket: http://gph.is/13hPTEZ",
+    "https://youtu.be/gqe7upZQmk0"
   ]
   
   jamieBanter = [
