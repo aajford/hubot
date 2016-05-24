@@ -1,5 +1,5 @@
 .DS_Store*
 .hubot_history
-node_modules/ws/build/
-node_modules/contextify/build/
+node_modules/ws/build/*
+node_modules/contextify/build/*
 
