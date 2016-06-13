@@ -62,9 +62,7 @@ module.exports = (robot) ->
     "Didn't he lose that boxing match?",
     "Don't get him started on the cafe menu",
     "He's probably at Wetherspoons",
-    "There's a sheep at reception asking for a Mr. Jonker?",
-    "This is how people from NZ play cricket: http://gph.is/13hPTEZ",
-    "https://youtu.be/gqe7upZQmk0"
+    "There's a sheep at reception asking for a Mr. Jonker?"
   ]
   
   jamieBanter = [
@@ -102,29 +100,29 @@ module.exports = (robot) ->
     "*A man who dreads trials and difficulties cannot become a revolutionary. If he is to become a revolutionary with an indomitable fighting spirit, he must be tempered in the arduous struggle from his youth. As the saying goes, early training means more than late earning.* - Kim Jong Il"
   ]
 
-  robot.hear /.*(kavi).*/i, (msg) ->
-    msg.send msg.random banter 
+  #robot.hear /.*(kavi).*/i, (msg) ->
+  #  msg.send msg.random banter 
   
-  robot.hear /.*(jonker).*/i, (msg) ->
-    msg.send msg.random nzBanter
+  #robot.hear /.*(jonker).*/i, (msg) ->
+  #  msg.send msg.random nzBanter
   
-  robot.hear /.*(jamie).*/i, (msg) ->
-    msg.send msg.random jamieBanter
+  #robot.hear /.*(jamie).*/i, (msg) ->
+  #  msg.send msg.random jamieBanter
   
-  robot.hear /.*(khaleel).*/i, (msg) ->
-    msg.send msg.random scouseBanter
+  #robot.hear /.*(khaleel).*/i, (msg) ->
+  #  msg.send msg.random scouseBanter
 
-  robot.hear /.*(jess).*/i, (msg) ->
-    msg.send msg.random jessBanter
+  #robot.hear /.*(jess).*/i, (msg) ->
+  #  msg.send msg.random jessBanter
   
-  robot.hear /.*(phil).*/i, (msg) ->
-    msg.send msg.random philBanter
+  #robot.hear /.*(phil).*/i, (msg) ->
+  #  msg.send msg.random philBanter
   
-  robot.hear /.*(Leeds).*/i, (msg) ->
-    msg.send "GRAAAAAYVVVEEEH"
+  #robot.hear /.*(Leeds).*/i, (msg) ->
+  #  msg.send "GRAAAAAYVVVEEEH"
   
-  robot.hear /.*(late ).*/i, (msg) ->
-    msg.send msg.random lateComments
+  #robot.hear /.*(late ).*/i, (msg) ->
+  #  msg.send msg.random lateComments
   
   robot.hear /.*( late).*/i, (msg) ->
     msg.send msg.random lateComments
