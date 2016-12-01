@@ -23,17 +23,17 @@ module.exports = (robot) ->
   robot.respond /iphone config$/i, (msg) ->
     msg.send "http://app.news.sky.com/ios/config.json"
 
-
   robot.respond /android config$/i, (msg) ->
     msg.send "http://app.news.sky.com/android/config.json"
-
 
   robot.respond /live stream$/i, (msg) ->
     msg.send "http://skydvn-ssmtv-mobile-prod.mobile-tv.sky.com/ssmtv-skynews/1404/sn.m3u8"
 
-
   robot.respond /service desk$/i, (msg) ->
-    msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973" 
+    msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973"
+
+  robot.respond /who's fault is it(.*)$/i, (msg) ->
+    msg.send "It's Jamie's fault!"  
 
   robot.respond /who ate all the (.*)$/i, (msg) ->
     foodItem = msg.match[1]
