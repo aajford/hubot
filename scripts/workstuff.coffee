@@ -36,8 +36,8 @@ module.exports = (robot) ->
     msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973" 
 
   robot.respond /who ate all the (.*)$/i, (msg) ->
-    foodItem = res.match[1]
-    msg.send "Djenan ate all the #{doorType}!"
+    foodItem = msg.match[1]
+    msg.send "Djenan ate all the #{foodItem}!"
 
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
