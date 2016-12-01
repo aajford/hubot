@@ -8,6 +8,7 @@
 #   hubot android config - Reply with URL for Android config
 #   hubot live stream - Reply with URL for live stream
 #   hubot service desk - Reply with contact details for the DC service desk
+#   hubot who ate all the brownies - Reply with the person that ate all the brownies
 
 
 module.exports = (robot) ->
@@ -34,8 +35,9 @@ module.exports = (robot) ->
   robot.respond /service desk$/i, (msg) ->
     msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973" 
 
-  robot.respond /who ate all the brownies$/i, (msg) ->
-    msg.send "Djenan ate all the brownies!"
+  robot.respond /who ate all the (.*)$/i, (msg) ->
+    foodItem = res.match[1]
+    msg.send "Djenan ate all the #{doorType}!"
 
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
