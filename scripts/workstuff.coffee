@@ -30,7 +30,7 @@ module.exports = (robot) ->
   robot.respond /service desk$/i, (msg) ->
     msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973"
 
-  robot.respond /whos fault is it(.*)$/i, (msg) ->
+  robot.respond /who(.*)s fault is it(.*)(.*)$/i, (msg) ->
     msg.send "It's Jamie's fault!"  
 
   robot.respond /who ate all the (.*)$/i, (msg) ->
