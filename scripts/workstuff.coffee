@@ -103,8 +103,14 @@ module.exports = (robot) ->
     "*A man who dreads trials and difficulties cannot become a revolutionary. If he is to become a revolutionary with an indomitable fighting spirit, he must be tempered in the arduous struggle from his youth. As the saying goes, early training means more than late earning.* - Kim Jong Il"
   ]
 
+  crappium = [
+    ":poop:ium",
+    "*CRAPPIUM*",
+    "More like crappium :smirk:"
+  ]
+
   robot.hear /.*(appium).*/i, (msg) ->
-    msg.send "CRAPPIUM!" 
+    msg.send msg.random crappium
   
   #robot.hear /.*(jonker).*/i, (msg) ->
   #  msg.send msg.random nzBanter
