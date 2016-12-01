@@ -15,10 +15,8 @@ module.exports = (robot) ->
   robot.respond /wiki$/i, (msg) ->
     msg.send "http://wiki.scoop.bskyb.com/wiki/Main_Page"
 
-
   robot.respond /android build server$/i, (msg) ->
     msg.send "http://mobile-build.scoop.bskyb.com/"
-
 
   robot.respond /iphone config$/i, (msg) ->
     msg.send "http://app.news.sky.com/ios/config.json"
@@ -105,8 +103,8 @@ module.exports = (robot) ->
     "*A man who dreads trials and difficulties cannot become a revolutionary. If he is to become a revolutionary with an indomitable fighting spirit, he must be tempered in the arduous struggle from his youth. As the saying goes, early training means more than late earning.* - Kim Jong Il"
   ]
 
-  #robot.hear /.*(kavi).*/i, (msg) ->
-  #  msg.send msg.random banter 
+  robot.hear /.*(appium).*/i, (msg) ->
+    msg.send "CRAPPIUM!" 
   
   #robot.hear /.*(jonker).*/i, (msg) ->
   #  msg.send msg.random nzBanter
