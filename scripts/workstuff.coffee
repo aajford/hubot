@@ -34,6 +34,9 @@ module.exports = (robot) ->
   robot.respond /service desk$/i, (msg) ->
     msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973" 
 
+  robot.respond /who ate all the brownies$/i, (msg) ->
+    msg.send "Djenan ate all the brownies!"
+
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
     "Who? He is nothing to me.",
