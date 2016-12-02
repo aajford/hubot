@@ -33,9 +33,9 @@ module.exports = (robot) ->
   robot.respond /who(.*)s fault is it(.*)(.*)$/i, (msg) ->
     msg.send "It's Jamie's fault!"  
 
-  robot.respond /who ate all the (.*)$/i, (msg) ->
-    foodItem = msg.match[1]
-    msg.send "Djenan ate all the #{foodItem}!"
+  #robot.respond /who ate all the (.*)$/i, (msg) ->
+  #  foodItem = msg.match[1]
+  #  msg.send "Djenan ate all the #{foodItem}!"
 
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
