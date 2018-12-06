@@ -1,8 +1,8 @@
 # Description:
-#   Provides work related stuff 
+#   Provides work related stuff
 #
 # Commands:
-#   hubot wiki - Reply with URL for the wiki 
+#   hubot wiki - Reply with URL for the wiki
 #   hubot android build server - Reply with URL for Android Build Server
 #   hubot iphone config - Reply with URL for iPhone config
 #   hubot android config - Reply with URL for Android config
@@ -31,11 +31,7 @@ module.exports = (robot) ->
     msg.send "Business hours: 0113 243 2973, dcservicedesk@sky.uk, Out of Hours: 0113 243 2973"
 
   robot.respond /who(.*)s fault is it(.*)(.*)$/i, (msg) ->
-    msg.send "It's Jamie's fault!"  
-
-  #robot.respond /who ate all the (.*)$/i, (msg) ->
-  #  foodItem = msg.match[1]
-  #  msg.send "Djenan ate all the #{foodItem}!"
+    msg.send "It's Jamie's fault!"
 
   banter = [
     "You mean that guy who sold out and went to Gravy town?",
@@ -58,7 +54,7 @@ module.exports = (robot) ->
     "Bad boy 4 lyf",
     "Think he's missed a semicolon again"
   ]
-  
+
   nzBanter = [
     "I hear New Zealand won more medals per capita",
     "I'm not quite sure where New Zealand is, but you can dance your way there from Old Zealand",
@@ -67,29 +63,30 @@ module.exports = (robot) ->
     "He's probably at Wetherspoons",
     "There's a sheep at reception asking for a Mr. Jonker?"
   ]
-  
+
   jamieBanter = [
     "Beefcake? Yeah, beefcake.",
     "Don't mention Jira to him",
-    "I hear the steroids make him angry"
+    "I hear the steroids make him angry",
+    "Eat the meat!"
   ]
-  
+
   scouseBanter = [
     "Gerrard is just a poor man's Carrick"
     "He's only here so he can punch Dan in the face again",
     "Everton's finest"
     "He wasn't even that good at beer pong"
   ]
-  
+
   jessBanter = [
     "Cheesy balls please",
     "Isn't her supervillain name 'The Jessticle'?"
   ]
-  
+
   philBanter = [
     "I don't think Frankie & Benny's is over priced"
   ]
-  
+
   lateComments = [
     "TEN POINTS FROM GRYFFINDOR",
     "Late? A wizard is never late",
@@ -111,31 +108,27 @@ module.exports = (robot) ->
 
   robot.hear /.*(appium).*/i, (msg) ->
     msg.send msg.random crappium
-  
-  #robot.hear /.*(jonker).*/i, (msg) ->
-  #  msg.send msg.random nzBanter
-  
-  #robot.hear /.*(jamie).*/i, (msg) ->
-  #  msg.send msg.random jamieBanter
-  
-  #robot.hear /.*(khaleel).*/i, (msg) ->
-  #  msg.send msg.random scouseBanter
 
-  #robot.hear /.*(jess).*/i, (msg) ->
-  #  msg.send msg.random jessBanter
-  
-  #robot.hear /.*(phil).*/i, (msg) ->
-  #  msg.send msg.random philBanter
-  
-  #robot.hear /.*(Leeds).*/i, (msg) ->
-  #  msg.send "GRAAAAAYVVVEEEH"
-  
-  #robot.hear /.*(late ).*/i, (msg) ->
-  #  msg.send msg.random lateComments
-  
+  robot.hear /.*(jonker).*/i, (msg) ->
+   msg.send msg.random nzBanter
+
+  robot.hear /.*(jamie).*/i, (msg) ->
+   msg.send msg.random jamieBanter
+
+  robot.hear /.*(khaleel).*/i, (msg) ->
+   msg.send msg.random scouseBanter
+
+  robot.hear /.*(jess).*/i, (msg) ->
+   msg.send msg.random jessBanter
+
+  robot.hear /.*(phil).*/i, (msg) ->
+   msg.send msg.random philBanter
+
+  robot.hear /.*(Leeds).*/i, (msg) ->
+   msg.send "GRAAAAAYVVVEEEH"
+
+  robot.hear /.*(late ).*/i, (msg) ->
+   msg.send msg.random lateComments
+
   robot.hear /.*( late).*/i, (msg) ->
     msg.send msg.random lateComments
-
-
-
-
